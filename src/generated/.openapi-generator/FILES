@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+index.ts
+models/DiscriminatedA.ts
+models/DiscriminatedB.ts
+models/DiscriminatedObject.ts
+models/DiscriminatedObjectDiscriminatedValuesInner.ts
+models/index.ts
+runtime.ts

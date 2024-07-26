@@ -1,0 +1,7 @@
+services:
+  api-client:
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/app
+    user: "1000:1000"

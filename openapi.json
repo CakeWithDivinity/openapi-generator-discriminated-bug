@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "paths": {},
+    "info": {
+        "version": "1.0.0",
+        "title": "reproduction"
+    },
+    "tags": [],
+    "servers": [],
+    "components": {
+        "schemas": {
+            "DiscriminatedObject": {
+                "type": "object",
+                "properties": {
+                    "discriminatedValues": {
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "#/components/schemas/DiscriminatedA"
+                                },
+                                {
+                                    "$ref": "#/components/schemas/DiscriminatedB"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "DiscriminatedA": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "default": "A",
+                        "enum": [
+                            "A"
+                        ]
+                    }
+                },
+                "required": [
+                    "type"
+                ]
+            },
+            "DiscriminatedB": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "default": "B",
+                        "enum": [
+                            "B"
+                        ]
+                    }
+                },
+                "required": [
+                    "type"
+                ]
+            }
+        }
+    }
+}
